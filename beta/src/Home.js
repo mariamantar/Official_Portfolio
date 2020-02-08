@@ -1,111 +1,140 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Home.scss';
 import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
+import trollface from './trollface.png';
 
-const Home = () => {
-  return (
-    <div className="container">
-      <main>
-        <div className="button_switch_container">
-          <div className="button_switch">
-            <p>Ugh! LightMode? </p>
-            <button>Switch to Dark Mode</button>
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hidden: true };
+    this.toggleImage = this.toggleImage.bind(this);
+  }
+
+  toggleImage() {
+    this.setState({ hidden: false });
+  }
+
+  render() {
+    const clickme = this.toggleImage;
+    return (
+      <div className="container">
+        <main>
+          <div className="button_switch_container">
+            <div className="button_switch">
+              <p>Ugh! LightMode? </p>
+              <button>Switch to Dark Mode</button>
+            </div>
           </div>
-        </div>
-        <header className="header">
-          <h2>1.0_1-MariamAntar.wav</h2>
-        </header>
-        <div className="content">
-          <p>
-            Software engineer and tech head from Sydney, Australia. I build and
-            repair things. 🛠
-          </p>
-          <p>
-            I currently work at{' '}
-            <span>
-              <a
-                href="https://www.hireup.com.au/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hireup
-              </a>
-            </span>
-            , an online platform helping people seeking support.
-          </p>
-        </div>
-        <div>
-          <h2>1.0_2-Work.mp3</h2>
-          <div className="work">
+          <header className="header">
+            <h2>1.0_1-MariamAntar.wav</h2>
+          </header>
+          <div className="content">
+            <p>
+              Software engineer and tech head from Sydney, Australia. I build
+              and repair things.
+            </p>
+            <p>
+              I currently work at{' '}
+              <span>
+                <a
+                  href="https://www.hireup.com.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hireup
+                </a>
+              </span>
+              , an online platform helping people seeking support.
+            </p>
+            <div className="portfolio-pic">
+              <button onClick={clickme}>Click to view selfie</button>
+            </div>
+
+            {!this.state.hidden && (
+              <div className="trollface-pic">
+                <img alt="dance" src={trollface} />
+              </div>
+            )}
+          </div>
+          <div>
+            <h2>1.0_2-Work.mp3</h2>
+            <div className="work">
+              <ul>
+                <li>
+                  Check out my projects on{' '}
+                  <span>
+                    <a
+                      href="https://github.com/mariamantar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      github
+                    </a>
+                  </span>
+                </li>
+                <li>
+                  Read my blogposts on{' '}
+                  <span>
+                    <a
+                      href="https://dev.to/mariamantar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Dev.to
+                    </a>
+                  </span>
+                </li>
+                <li>
+                  Watch my videos on{' '}
+                  <span>
+                    <a
+                      href="https://www.youtube.com/channel/UC4luHbFfHOuMCcQM4TKZNTw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      youtube
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="contact">
+            <h2>1.0_3-Contact.sd</h2>
+            <p>
+              Email: mariamantar1[at]
+              <span role="img" aria-label="hot">
+                🔥
+              </span>
+              mail.com
+            </p>
+          </div>
+          <div className="social">
             <ul>
               <li>
-                Check out my projects on{' '}
-                <span>
-                  <a
-                    href="https://github.com/mariamantar"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    github
-                  </a>
-                </span>
+                <a
+                  href="https://twitter.com/mariamantar_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitterSquare />
+                </a>
               </li>
               <li>
-                Read my blogposts on{' '}
-                <span>
-                  <a
-                    href="https://dev.to/mariamantar"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Dev.to
-                  </a>
-                </span>
-              </li>
-              <li>
-                Watch my videos on{' '}
-                <span>
-                  <a
-                    href="https://www.youtube.com/channel/UC4luHbFfHOuMCcQM4TKZNTw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    youtube
-                  </a>
-                </span>
+                <a
+                  href="https://www.linkedin.com/in/mariamantar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
               </li>
             </ul>
           </div>
-        </div>
-        <div className="contact">
-          <h2>1.0_3-Contact.sd</h2>
-          <p>Email: mariamantar1[at]hotmail.com</p>
-        </div>
-        <div className="social">
-          <ul>
-            <li>
-              <a
-                href="https://twitter.com/mariamantar_"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitterSquare />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/mariamantar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </main>
-    </div>
-  );
-};
+        </main>
+      </div>
+    );
+  }
+}
 
 export default Home;
