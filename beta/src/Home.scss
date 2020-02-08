@@ -1,5 +1,27 @@
-// built mobile first
+// lightmode & darkmode
+.lightmode {
+  background-color: white;
+}
+.darkmode {
+  background-color: black;
+  color: green;
+  h2 {
+    border-bottom: 2px solid grey;
+  }
+  button {
+    background-color: black;
+    border-color: #008c23;
+    color: #008c23;
+  }
+  .button_switch_container {
+    border-color: #008c23;
+  }
+  .social ul li a {
+    color: grey;
+  }
+}
 
+// built mobile first
 .container {
   display: flex;
   justify-content: center;
@@ -17,6 +39,11 @@
     p {
       padding-top: 0;
       padding-bottom: 10px;
+    }
+
+    button p {
+      margin: 0;
+      padding-bottom: 0;
     }
   }
 }
@@ -39,6 +66,7 @@
   }
   a {
     color: black;
+    margin-right: 10px;
   }
   li {
     font-size: 25px;
@@ -47,9 +75,4 @@
     cursor: pointer;
     color: #008c23;
   }
-}
-
-.troll {
-  background-color: black;
-  color: green;
 }
