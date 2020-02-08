@@ -3,3 +3,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##Dependencies
 
 #SASS -> npm install node-sass
+
+This project was built mobile first
