@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
-import trollface from './trollface.png';
+import trollface from './trollface.svg';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { ishidden: false };
+    this.state = { hidden: false };
     this.state = { isSwitchOn: false };
   }
 
   render() {
-    const clickme = this.state.ishidden;
+    const isHidden = this.state.hidden;
     const isOn = this.state.isSwitchOn;
 
     return (
@@ -31,7 +31,7 @@ class Home extends Component {
               </div>
             </div>
             <header className="header">
-              <h2>1.0_1-MariamAntar.wav</h2>
+              <h2>1.0_1-MariamAntar.mov</h2>
             </header>
             <div className="content">
               <p>
@@ -52,14 +52,14 @@ class Home extends Component {
                 , an online platform helping people seeking support.
               </p>
               <div className="portfolio-pic">
-                <button onClick={() => this.setState({ ishidden: !clickme })}>
+                <button onClick={() => this.setState({ hidden: !isHidden })}>
                   Click to view selfie
                 </button>
               </div>
 
-              {clickme && (
+              {isHidden && (
                 <div className="trollface-pic">
-                  <img alt="dance" src={trollface} />
+                  <img className="svg" alt="troll face" src={trollface} />
                 </div>
               )}
             </div>

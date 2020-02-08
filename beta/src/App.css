@@ -31,11 +31,10 @@ button:hover {
   border-color: #008c23;
 }
 
-p {
-  padding-top: 1em;
-}
-
 ul {
   padding-top: 1em;
   padding-left: 0px;
+}
+a:hover {
+  color: blue;
 }
