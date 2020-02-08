@@ -123,6 +123,7 @@ class Home extends Component {
                     href="https://twitter.com/mariamantar_"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="twitter"
                   >
                     <FaTwitterSquare />
                   </a>
@@ -132,6 +133,7 @@ class Home extends Component {
                     href="https://www.linkedin.com/in/mariamantar/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="linkedin"
                   >
                     <FaLinkedin />
                   </a>
