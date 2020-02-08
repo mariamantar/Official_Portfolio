@@ -37,3 +37,25 @@
 .work {
   padding-left: 1em;
 }
+
+.social {
+  ul {
+    display: flex;
+    list-style: none;
+    padding-top: 0;
+  }
+  a {
+    color: black;
+  }
+  li {
+    font-size: 25px;
+  }
+  li:hover {
+    cursor: pointer;
+    color: #008c23;
+  }
+}
+
+.troll {
+  background-image: url(https://tenor.com/view/sike-troll-face-dancing-meme-psych-gif-4318961);
+}
