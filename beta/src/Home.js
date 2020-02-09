@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// use later
+import React, { useState, useEffect } from 'react';
 import storage from 'local-storage-fallback';
 import './Home.scss';
 import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
@@ -7,7 +6,13 @@ import trollface from './trollface.svg';
 
 const Home = () => {
   const [hidden, isHidden] = useState(false);
-  const [switchOn, isSwitchOn] = useState(false);
+  const [switchOn, isSwitchOn] = useState(
+    localStorage.getItem('switchOn') === 'true'
+  );
+
+  useEffect(() => {
+    localStorage.setItem('switchOn', switchOn);
+  }, [switchOn]);
 
   return (
     <div className={!switchOn ? 'container lightmode' : 'container darkmode'}>
