@@ -1,33 +1,3 @@
-// lightmode & darkmode
-.lightmode {
-  background-color: white;
-}
-.darkmode {
-  background-color: black;
-  color: green;
-  h2 {
-    border-bottom: 2px solid grey;
-  }
-  button {
-    background-color: black;
-    border-color: #008c23;
-    color: #008c23;
-  }
-
-  .button_switch_container {
-    border-color: #008c23;
-  }
-  .social ul li a {
-    color: grey;
-    &:hover {
-      color: blue;
-    }
-  }
-  .svg {
-    filter: invert(0.3) sepia(6) saturate(6) hue-rotate(90deg);
-  }
-}
-
 // built mobile first
 .container {
   display: flex;
@@ -84,6 +54,45 @@
   }
 }
 
+// lightmode & darkmode
+.lightmode {
+  background-color: white;
+}
+.darkmode {
+  background-color: black;
+  color: green;
+  h2 {
+    border-bottom: 2px solid grey;
+  }
+  button {
+    background-color: black;
+    border-color: #008c23;
+    color: #008c23;
+  }
+
+  .button_switch_container {
+    border-color: #008c23;
+  }
+  .social ul li a {
+    color: grey;
+    &:hover {
+      color: blue;
+    }
+  }
+  .svg {
+    filter: invert(0.3) sepia(6) saturate(6) hue-rotate(90deg);
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .container {
+    height: 100vh;
+  }
+  .darkmode {
+    height: 100vh;
+  }
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   .container {
@@ -94,10 +103,22 @@
   }
 }
 
-/* Large Devices, Wide Screens */
-// @media only screen and (min-width: 1200px) {
-//   body {
-//     height: 100vh;
-//     line-height: 0;
-//   }
-// }
+// desktop
+@media only screen and (min-width: 992px) {
+  .container {
+    height: 100vh;
+  }
+  .darkmode {
+    height: 100vh;
+  }
+}
+
+// large screens
+@media only screen and (min-width: 1280px) {
+  .container {
+    height: 100vh;
+  }
+  .darkmode {
+    height: 100vh;
+  }
+}
