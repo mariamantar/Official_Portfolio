@@ -11,7 +11,7 @@ const Home = () => {
   );
 
   useEffect(() => {
-    localStorage.setItem('switchOn', switchOn);
+    storage.setItem('switchOn', switchOn);
   }, [switchOn]);
 
   return (
@@ -50,18 +50,18 @@ const Home = () => {
             </span>
             , an online platform helping people seeking support.
           </p>
-          <div className="portfolio-pic">
-            <button onClick={() => isHidden(!hidden)}>
-              Click to view selfie
-            </button>
-          </div>
-
+        </div>
+        <div className="portfolio-pic">
+          <button onClick={() => isHidden(!hidden)}>
+            Click to view selfie
+          </button>
           {hidden && (
             <div className="trollface-pic">
               <img className="svg" alt="troll face" src={trollface} />
             </div>
           )}
         </div>
+
         <div>
           <h2>1.0_2-Work.mp3</h2>
           <div className="work">

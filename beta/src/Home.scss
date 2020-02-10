@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding: 15px;
+  padding: 1em;
 }
 
 .button_switch_container {
@@ -29,7 +29,7 @@
   padding-top: 20px;
 }
 .trollface-pic {
-  padding-top: 20px;
+  margin-top: 30px;
 }
 .work {
   padding-left: 1em;
@@ -84,41 +84,12 @@
   }
 }
 
-@media only screen and (min-width: 480px) {
-  .container {
-    height: 100vh;
-  }
-  .darkmode {
-    height: 100vh;
-  }
-}
-
-/* Small Devices, Tablets */
+// /* Desktop */
 @media only screen and (min-width: 768px) {
   .container {
-    height: 100vh;
+    padding-top: 3em;
   }
-  .darkmode {
-    height: 100vh;
-  }
-}
-
-// desktop
-@media only screen and (min-width: 992px) {
-  .container {
-    height: 100vh;
-  }
-  .darkmode {
-    height: 100vh;
-  }
-}
-
-// large screens
-@media only screen and (min-width: 1280px) {
-  .container {
-    height: 100vh;
-  }
-  .darkmode {
-    height: 100vh;
+  main {
+    height: 115vh;
   }
 }
